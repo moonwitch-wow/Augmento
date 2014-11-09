@@ -1,0 +1,24 @@
+## Interface: 60000
+
+## Title: Augmento
+## Notes: Rapes keybinds in a fun way; kills babies and saves cats. Don't use.
+## Author: Kelly Crabbé AKA MoonWitch
+## Version: 0.1a
+## X-Website: https://github.com/moonwitch/Augmento
+## X-Email: kelly.crabbe@gmail.com
+## X-Credits: Phanx
+
+#Class Bindings
+modules/druid.lua
+modules/mage.lua
+modules/monk.lua
+modules/priest.lua
+modules/shaman.lua
+modules/warlock.lua
+
+#General
+bindings.lua
+uitweaks.lua
+emote.lua
+core.lua
+about.lua
