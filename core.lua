@@ -13,7 +13,9 @@ function Augmento.PLAYER_LOGIN(...)
   ApplyMyBindings(true)
   ApplyMyOverrideBindings(true)
   ApplyDefaultActionBindings(nil, false)
-  SaveBindings(1)
+  SaveBindings(2) -- 1: Account Wide, 2: Character Wide
+
+  Augmento.ApplyUITweaks()
 end
 
 function Augmento.PLAYER_LOGOUT(...)
