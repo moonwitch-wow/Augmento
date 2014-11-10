@@ -8,14 +8,6 @@
 ## X-Email: kelly.crabbe@gmail.com
 ## X-Credits: Phanx
 
-#Class Bindings
-modules/druid.lua
-modules/mage.lua
-modules/monk.lua
-modules/priest.lua
-modules/shaman.lua
-modules/warlock.lua
-
 #General
 bindings.lua
 uitweaks.lua
