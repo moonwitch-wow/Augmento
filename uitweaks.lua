@@ -23,4 +23,15 @@ function Augmento.PLAYER_REGEN_ENABLED(event)
   if summonPending then
     self:StartSummonDelayTimer()
   end
+-- Slash Commands that shouldn't have been forgotten
+SlashCmdList['RELOAD_UI'] = function() ReloadUI() end
+SLASH_RELOAD_UI1 = '/rl'
+
+SLASH_TICKETGM1 = '/gm'
+SlashCmdList.TICKETGM = ToggleHelpFrame
+
+SLASH_PROF1 = '/prof'
+SLASH_PROF2 = '/professions'
+SlashCmdList.PROF = function()
+  CastSpell('Cooking')
 end
