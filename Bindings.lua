@@ -9,7 +9,6 @@ local bindFrame = CreateFrame("frame")
 ------------------------------------------------------------------------
 function ApplyMyBindings(silent)
   ClearAllBindings() -- Since we're hardwiring these; no need to keep some ;P
-
   -- Movement
   SetBinding("W", "MOVEFORWARD")
   SetBinding("SHIFT-W", "TOGGLEAUTORUN")
@@ -63,28 +62,29 @@ function ApplyMyBindings(silent)
   SetBinding("F11", "TOGGLEDUNGEONSANDRAIDS") --groupfinder
   SetBinding("SHIFT-F11", "TOGGLEENCOUNTERJOURNAL")
 
-
-
   -- UI Toggles
   -- SetBinding("ALT-Z", "TOGGLEUI")
   -- SetBinding("CTRL-R", "TOGGLEFPS")
 
   -- Camera
-  -- SetBinding("MOUSEWHEELUP", "CAMERAZOOMIN")
-  -- SetBinding("MOUSEWHEELDOWN", "CAMERAZOOMOUT")
+  SetBinding("MOUSEWHEELUP", "CAMERAZOOMIN")
+  SetBinding("MOUSEWHEELDOWN", "CAMERAZOOMOUT")
 
   -- -- Vehicle Aim
   -- SetBinding("CTRL-MOUSEWHEELUP", "VEHICLEAIMUP")
   -- SetBinding("CTRL-MOUSEWHEELDOWN", "VEHICLEAIMDOWN")
 
   -- Addons
-  SetBinding("CTRL-V", "SPELL SummonRandomFavoriteMount")
+  SetBinding("CTRL-V", "DISMOUNT") -- Using an addon that hijacks DISMOUNT
   SetBinding("F12", "CLICK CorkFrame:LeftButton")
+  SetBinding("F", "SPELL Survey")
 
   if not silent then
     print("Bindings applied.")
   end
 end
+
+
 
 function ApplyMyOverrideBindings(silent)
   local _, class = UnitClass("player")
@@ -94,65 +94,84 @@ function ApplyMyOverrideBindings(silent)
     -- ["ALT-`"] = "ITEM Hearthstone",
   }
 
-  --  -- Racial Abilities
-  --  if r == "BloodElf" then
-  --    ob["NUMPADMINUS"] = "SPELL Arcane Torrent"
-  --  elseif r == "Orc" then
-  --    ob["NUMPADMINUS"] = "SPELL Blood Fury"
-  --  elseif r == "Tauren" then
-  --    ob["NUMPADMINUS"] = "SPELL War Stomp"
-  --  elseif r == "Troll" then
-  --    ob["NUMPADMINUS"] = "SPELL Berserking"
-  --  end
-
   -- Class Abilities
   if class == "DRUID" then
-  --    -- Shapeshift Forms
-  --    ob["F1"] = "MACRO Bear"
-  --    ob["F2"] = "MACRO Aquatic"
-  --    ob["F3"] = "MACRO Cat"
-  --    ob["F4"] = "MACRO Travel"
-  --    ob["F5"] = "MACRO Flight"
+    ob["Q"] = "SPELL Running Wild"
+    ob["E"] = "SPELL Darkflight" -- Worgen biatches
 
-  --    ob["C"]  = "MACRO Cure"
-  --    ob["G"]  = "MACRO Interrupt"
-  --    ob["Q"]  = "MACRO Taunt"
-  --    ob["W"]  = "MACRO Fire"
-  --    ob["NUMPAD0"] = "MACRO Power"
+    -- Shapeshift Forms
+    ob["SHIFT-F1"] = "SPELL Bear Form"
+    ob["SHIFT-F2"] = "SPELL Aquatic Form"
+    ob["SHIFT-F3"] = "SPELL Cat Form"
+    ob["SHIFT-F4"] = "SPELL Travel Form"
+    ob["SHIFT-F5"] = "SPELL Flight Form"
+  elseif class == "MAGE" then
+    ob["Q"] = "SPELL Greater Invisibility"
+    ob["T"] = "SPELL Blink"
+    ob["C"] = "SPELL Icy Veins"
+    ob["F"] = "SPELL Counterspell"
+    ob["H"] = "SPELL Spellsteal"
+    ob["X"] = "SPELL Evocation"
+
+    ob["SHIFT-Q"] = "SPELL Ice Block"
+  elseif class == "MONK" then
+    ob["Q"] = "SPELL Roll"
+  elseif class == "PRIEST" then
+    ob["Q"] = "SPELL Power Word: Shield"
+    ob["G"] = "SPELL Fade"
+    ob["E"] = "SPELL Mass Dispell"
+
+    ob["SHIFT-C"] = "SPELL Psychic Scream"
+    ob["V"] = "SPELL Lightning Shield"
+    ob["V"] = "SPELL Lightning Shield"
+    ob["V"] = "SPELL Lightning Shield"
+
+    ob["SHIFT-G"] = "MACRO LoF"
+    ob["ALT-G"] = "MACRO /cast [@mouseover] Levitate"
+
+    -- Shadow
+    ob["X"] = "SPELL Shadow Word: Death"
+    ob["|"] = "SPELL Shadowform"
+
+    -- Disc
+    -- ob["H"] = "SPELL Power Word: Barrier"
+    -- ob["T"] = "MACRO /cast [@mouseover] Void Shift"
+    -- ob["X"] = "SPELL Archangel"
+    -- ob["Z"] = "MACRO /cast [@mouseover] Pain Suppression"
+
+    -- ob["SHIFT-X"] = "SPELL Spirit Shell"
+    -- ob["SHIFT-H"] = "SPELL LoF"
+
   elseif class == "SHAMAN" then
-    -- Shields
     ob["V"] = "SPELL Lightning Shield"
     ob["Q"] = "SPELL Astral Shift"
-  --    ob["W"] = "MACRO Shield"
-  --    ob["Z"] = "MACRO Bind"
-  --    ob["X"] = "MACRO Hex"
-  --    ob["C"] = "MACRO Cure"
-  --    ob["NUMPAD0"] = "MACRO Power"
-  --    ob["NUMPADDECIMAL"] = "MACRO Defend"
+    ob["G"] = "SPELL Ascendance"
+    ob["U"] = "SPELL Far Sight"
+    ob["SHIFT-V"] = "SPELL Water Shield"
 
-  --    ob["CTRL-`"] = "SPELL Ghost Wolf"
-  --    ob["G"] = "SPELL Wind Shear"
-  --    ob["O"] = "SPELL Far Sight"
-  --    ob["P"] = "SPELL Water Walking"
-  --    ob["F1"] = "SPELL Earthbind Totem"
-  --    ob["F2"] = "SPELL Searing Totem"
-  --    ob["F3"] = "SPELL Healing Tide Totem"
-  --    ob["F4"] = "SPELL Stormlash Totem"
-  --    ob["F5"] = "SPELL Totemic Recall"
-  --    ob["NUMPADPLUS"] = "SPELL Bloodlust"
-  --    ob["NUMPAD1"] = "SPELL Ascendance"
-  --    ob["NUMPAD2"] = "SPELL Spirit Walk"
-  --    ob["NUMPAD3"] = "SPELL Astral Shift"
-  --    ob["NUMPADDIVIDE"] = "SPELL Earth Elemental Totem"
-  --    ob["NUMPADMULTIPLY"] = "SPELL Fire Elemental Totem"
-  elseif class == "PRIEST" then
+    -- Since I rebind my F keys ..
+    ob["§"] = "FOCUSTARGET"
+
+    -- Elemental
+    ob["F1"] = "SPELL Searing Totem"
+    ob["F2"] = "SPELL Earth Elemental Totem"
+    ob["F3"] = "SPELL Healing Stream Totem"
+    ob["F4"] = "SPELL Stormlash Totem"
+    ob["F5"] = "SPELL Totemic Projection"
+
+    ob["SHIFT-F1"] = "SPELL Magma Totem"
+    ob["SHIFT-F2"] = "SPELL Tremor Totem"
+    ob["SHIFT-F3"] = "SPELL Healing Tide Totem"
+    ob["SHIFT-F4"] = "SPELL Windwalk Totem"
+    ob["SHIFT-F5"] = "SPELL Totemic Recall"
+
+    ob["ALT-F1"] = "SPELL Fire Elemental Totem"
+    -- Enhancement
+
+    -- Resto
 
   elseif class == "WARLOCK" then
     ob["Q"] = "SPELL Life Tap"
-
-  elseif class == "MAGE" then
-
-  elseif class == "MONK" then
 
   end
 
