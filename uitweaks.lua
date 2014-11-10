@@ -10,6 +10,9 @@ function Augmento.PLAYER_REGEN_DISABLED(event)
   if summonPending then
     self:StopSummonDelayTimer()
   end
+function Augmento.ApplyUITweaks()
+  -- Fix Macro font
+  SystemFont_Shadow_Small:SetFont(STANDARD_TEXT_FONT, 12)
 end
 
 function Augmento.PLAYER_REGEN_ENABLED(event)
