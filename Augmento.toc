@@ -9,6 +9,8 @@
 ## X-Credits: Phanx
 
 #General
+cvars.lua
+macros.lua
 bindings.lua
 uitweaks.lua
 emote.lua
