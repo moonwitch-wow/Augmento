@@ -20,3 +20,14 @@ SLASH_PROF2 = '/professions'
 SlashCmdList.PROF = function()
   CastSpell('Cooking')
 end
+
+------------------------------------------------------------------------
+-- Toggle nameplates on while in combat
+function Augmento.PLAYER_REGEN_DISABLED(...)
+  SetCVar("nameplateShowEnemies", 1)
+
+end
+
+function Augmento.PLAYER_REGEN_ENABLED(...)
+  SetCVar("nameplateShowEnemies", 0)
+end
