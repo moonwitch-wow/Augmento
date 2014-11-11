@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------
 -- Namespaceing
 ------------------------------------------------------------------------
-local Augmento, ns = ...
+local _, Augmento = ...
 
 local description = "Augmento is my own setup. I started out with a hacked version of oBindings by haste, it evolved into something more - and thanks to Phanx I\'ve rewritten it completely to be less rape-style.\nThere are no in game settings; all is done in Lua itself. Should you have downloaded this and installed it - congratulations, you\'ve just erased ALL your keybindings."
 local credits = "I\'d like to thank Tekkub and Phanx and haste, Tekkub unbeknowingly inspired me, Phanx is just awesome, her patience with me is endless. Also; cats."
