@@ -3,6 +3,8 @@
 ------------------------------------------------------------------------
 local _, Augmento = ...
 
+local soundFile = [=[Sound\Interface\ReadyCheck.wav]=]
+
 function Augmento.ApplyUITweaks()
    -- Fix Macro font
    SystemFont_Shadow_Small:SetFont(STANDARD_TEXT_FONT, 12)
