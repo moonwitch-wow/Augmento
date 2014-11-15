@@ -15,7 +15,11 @@ function Augmento.PLAYER_ENTERING_WORLD(...)
   ApplyDefaultActionBindings(nil, false)
   SaveBindings(1) -- 1: Account Wide, 2: Character Wide
 
-  Augmento.ApplyUITweaks()
+  -- Augmento.ApplyUITweaks()
+  SystemFont_Shadow_Small:SetFont(STANDARD_TEXT_FONT, 12) -- changing the macro font, it's too damn small
+
+  Augmento.Init()
+  print('|cffff6000Augmento:|r Successfully initialized settings')
 end
 
 function Augmento.PLAYER_LOGOUT(...)
