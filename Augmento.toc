@@ -16,5 +16,6 @@ uitweaks.lua
 autoloot.lua
 social.lua
 emote.lua
+professions.lua
 core.lua
 about.lua
