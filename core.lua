@@ -13,7 +13,7 @@ function Augmento.PLAYER_ENTERING_WORLD(...)
   ApplyMyBindings(true)
   ApplyMyOverrideBindings(true)
   ApplyDefaultActionBindings(nil, false)
-  SaveBindings(2) -- 1: Account Wide, 2: Character Wide
+  SaveBindings(1) -- 1: Account Wide, 2: Character Wide
 
   Augmento.ApplyUITweaks()
 end
