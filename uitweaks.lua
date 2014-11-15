@@ -20,6 +20,17 @@ SLASH_PROF1 = '/prof'
 SLASH_PROF2 = '/professions'
 SlashCmdList.PROF = function()
   CastSpell('Cooking')
+------------------------------------------------------------------------
+-- Filtering on Achievements and Guild
+------------------------------------------------------------------------
+function Augmento.ADOON_LOADED(addon)
+   if(addon == 'Blizzard_AchievementUI') then
+      AchievementFrame_SetFilter(3)
+   elseif(addon == 'Blizzard_GuildUI') then
+      GuildFrame:HookScript('OnShow', function()
+         GuildFrameTab2:Click()
+      end)
+   end
 end
 
 ------------------------------------------------------------------------
