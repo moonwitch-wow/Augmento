@@ -61,6 +61,7 @@ function ApplyMyBindings(silent)
 
   SetBinding("F11", "TOGGLEDUNGEONSANDRAIDS") --groupfinder
   SetBinding("SHIFT-F11", "TOGGLEENCOUNTERJOURNAL")
+  SetBinding("ALT-F11", "TOGGLEGARRISONREPORT")
 
   -- UI Toggles
   -- SetBinding("ALT-Z", "TOGGLEUI")
@@ -76,8 +77,9 @@ function ApplyMyBindings(silent)
 
   -- Addons
   SetBinding("CTRL-V", "DISMOUNT") -- Using an addon that hijacks DISMOUNT
+  -- SetBinding("CTRL-V", "MACRO Squire3")
   SetBinding("F12", "CLICK CorkFrame:LeftButton")
-  SetBinding("F", "SPELL Survey")
+  SetBinding("SHIFT-F", "SPELL Survey")
 
   if not silent then
     print("Bindings applied.")
@@ -117,17 +119,11 @@ function ApplyMyOverrideBindings(silent)
   elseif class == "MONK" then
     ob["Q"] = "SPELL Roll"
   elseif class == "PRIEST" then
-    ob["Q"] = "SPELL Power Word: Shield"
-    ob["G"] = "SPELL Fade"
+    ob["Q"] = "MACRO Pr01"
+    ob["G"] = "MACRO Pr02"
     ob["E"] = "SPELL Mass Dispell"
 
     ob["SHIFT-C"] = "SPELL Psychic Scream"
-    ob["V"] = "SPELL Lightning Shield"
-    ob["V"] = "SPELL Lightning Shield"
-    ob["V"] = "SPELL Lightning Shield"
-
-    ob["SHIFT-G"] = "MACRO LoF"
-    ob["ALT-G"] = "MACRO /cast [@mouseover] Levitate"
 
     -- Shadow
     ob["X"] = "SPELL Shadow Word: Death"
