@@ -34,13 +34,18 @@ function Augmento.ADOON_LOADED(addon)
 end
 
 ------------------------------------------------------------------------
--- Toggle nameplates on while in combat
+-- Toggle nameplates on while in combat and sound a bell.
+
 function Augmento.PLAYER_REGEN_DISABLED(...)
    SetCVar("nameplateShowEnemies", 1)
+   UIErrorsFrame:AddMessage('+ Combat', 1, 1, 1)
 end
 
 function Augmento.PLAYER_REGEN_ENABLED(...)
    SetCVar("nameplateShowEnemies", 0)
+   UIErrorsFrame:AddMessage('- Combat', 1, 1, 1)
+end
+
 ------------------------------------------------------------------------
 -- Gimme a sound on :
 -- LFG
