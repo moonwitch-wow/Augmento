@@ -72,6 +72,22 @@ function Augmento.CHAT_MSG_RAID_BOSS_WHISPER(msg, name)
 end
 
 ------------------------------------------------------------------------
+-- Enable sound in Cinematics
+------------------------------------------------------------------------
+function Augmento.CINEMATIC_START(boolean)
+   SetCVar('Sound_EnableMusic', 1)
+   SetCVar('Sound_EnableAmbience', 1)
+   SetCVar('Sound_EnableSFX', 1)
+end
+
+function Augmento.CINEMATIC_STOP()
+   SetCVar('Sound_EnableMusic', 0)
+   SetCVar('Sound_EnableAmbience', 1)
+   SetCVar('Sound_EnableSFX', 1)
+end
+
+
+------------------------------------------------------------------------
 -- Sell your shit
 
 -- Parse Gold/Silver/Copper
