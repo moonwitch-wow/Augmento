@@ -9,7 +9,7 @@ local handler = CreateFrame("Frame")
 ------------------------------------------------------------------------
 -- Functions - functions named after events for easy event tracking
 ------------------------------------------------------------------------
-function Augmento.PLAYER_LOGIN(...)
+function Augmento.PLAYER_ENTERING_WORLD(...)
   ApplyMyBindings(true)
   ApplyMyOverrideBindings(true)
   ApplyDefaultActionBindings(nil, false)
