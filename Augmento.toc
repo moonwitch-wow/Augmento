@@ -13,6 +13,7 @@ cvars.lua
 macros.lua
 bindings.lua
 uitweaks.lua
+autoloot.lua
 social.lua
 emote.lua
 core.lua
