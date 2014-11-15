@@ -18,10 +18,6 @@ SLASH_RELOAD_UI1 = '/rl'
 SLASH_TICKETGM1 = '/gm'
 SlashCmdList.TICKETGM = ToggleHelpFrame
 
-SLASH_PROF1 = '/prof'
-SLASH_PROF2 = '/professions'
-SlashCmdList.PROF = function()
-  CastSpell('Cooking')
 ------------------------------------------------------------------------
 -- Filtering on Achievements and Guild
 ------------------------------------------------------------------------
