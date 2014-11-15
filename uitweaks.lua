@@ -30,6 +30,29 @@ end
 
 function Augmento.PLAYER_REGEN_ENABLED(...)
    SetCVar("nameplateShowEnemies", 0)
+------------------------------------------------------------------------
+-- Gimme a sound on :
+-- LFG
+-- PARTY INVITE
+-- RAID BOSS START
+------------------------------------------------------------------------
+
+function Augmento.LFG_PROPOSAL_SHOW()
+   PlaySoundFile(soundFile, 'Master')
+end
+
+ReadyCheckListenerFrame:SetScript('OnShow', function()
+   PlaySoundFile(soundFile, 'Master')
+end)
+
+function Augmento.PARTY_INVITE_REQUEST()
+   PlaySoundFile(soundFile, 'Master')
+end
+
+function Augmento.CHAT_MSG_RAID_BOSS_WHISPER(msg, name)
+   if(name == UnitName('player') and msg == 'You are next in line!') then
+      -- PlaySoundFile(soundFile, 'Master')
+   end
 end
 
 ------------------------------------------------------------------------
