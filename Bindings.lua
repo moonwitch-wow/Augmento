@@ -96,7 +96,7 @@ function ApplyMyOverrideBindings(silent)
     -- ["ALT-`"] = "ITEM Hearthstone",
   }
 
-  -- Class Abilities
+  -- [[ Druid Bindings ]] --
   if class == "DRUID" then
     ob["Q"] = "SPELL Running Wild"
     ob["E"] = "SPELL Darkflight" -- Worgen biatches
@@ -107,6 +107,8 @@ function ApplyMyOverrideBindings(silent)
     ob["SHIFT-F3"] = "SPELL Cat Form"
     ob["SHIFT-F4"] = "SPELL Travel Form"
     ob["SHIFT-F5"] = "SPELL Flight Form"
+
+    -- [[ Mage Bindings ]] --
   elseif class == "MAGE" then
     ob["Q"] = "SPELL Greater Invisibility"
     ob["T"] = "SPELL Blink"
@@ -116,8 +118,12 @@ function ApplyMyOverrideBindings(silent)
     ob["X"] = "SPELL Evocation"
 
     ob["SHIFT-Q"] = "SPELL Ice Block"
+
+    -- [[ Monk Bindings ]] --
   elseif class == "MONK" then
     ob["Q"] = "SPELL Roll"
+
+    -- [[ Priest Bindings ]] --
   elseif class == "PRIEST" then
     ob["Q"] = "MACRO Pr01"
     ob["G"] = "MACRO Pr02"
@@ -138,30 +144,37 @@ function ApplyMyOverrideBindings(silent)
     -- ob["SHIFT-X"] = "SPELL Spirit Shell"
     -- ob["SHIFT-H"] = "SPELL LoF"
 
+    -- [[ Shaman Bindings ]] --
   elseif class == "SHAMAN" then
     ob["V"] = "SPELL Lightning Shield"
     ob["Q"] = "SPELL Astral Shift"
     ob["G"] = "SPELL Ascendance"
     ob["U"] = "SPELL Far Sight"
+    ob["F"] = "SPELL Shamanistic Rage"
+
     ob["SHIFT-V"] = "SPELL Water Shield"
+    ob["SHIFT-Q"] = "SPELL Gift of the Naaru"
 
     -- Since I rebind my F keys ..
     ob["§"] = "FOCUSTARGET"
+    ob["SHIFT-§"] = "TARGETFOCUS"
 
     -- Elemental
     ob["F1"] = "SPELL Searing Totem"
     ob["F2"] = "SPELL Earth Elemental Totem"
     ob["F3"] = "SPELL Healing Stream Totem"
     ob["F4"] = "SPELL Stormlash Totem"
-    ob["F5"] = "SPELL Totemic Projection"
 
-    ob["SHIFT-F1"] = "SPELL Magma Totem"
-    ob["SHIFT-F2"] = "SPELL Tremor Totem"
-    ob["SHIFT-F3"] = "SPELL Healing Tide Totem"
-    ob["SHIFT-F4"] = "SPELL Windwalk Totem"
-    ob["SHIFT-F5"] = "SPELL Totemic Recall"
+    ob["CTRL-F1"] = "SPELL Fire Elemental Totem"
+    ob["CTRL-F2"] = "SPELL Tremor Totem"
+    ob["CTRL-F3"] = "SPELL Healing Tide Totem"
+    ob["CTRL-F4"] = "SPELL Windwalk Totem"
 
-    ob["ALT-F1"] = "SPELL Fire Elemental Totem"
+    ob["SHIFT-F1"] = "SPELL Totemic Recall"
+    ob["SHIFT-F2"] = "SPELL Totemic Projection"
+
+    ob["ALT-F2"] = "SPELL Earthgrab Totem"
+
     -- Enhancement
 
     -- Resto
