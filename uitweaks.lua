@@ -21,7 +21,7 @@ SlashCmdList.TICKETGM = ToggleHelpFrame
 ------------------------------------------------------------------------
 -- Filtering on Achievements and Guild
 ------------------------------------------------------------------------
-function Augmento.ADOON_LOADED(addon)
+function Augmento.ADDON_LOADED(addon)
    if(addon == 'Blizzard_AchievementUI') then
       AchievementFrame_SetFilter(3)
    elseif(addon == 'Blizzard_GuildUI') then
