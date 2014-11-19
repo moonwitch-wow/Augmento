@@ -147,7 +147,7 @@ function ApplyMyOverrideBindings(silent)
     -- [[ Shaman Bindings ]] --
   elseif class == "SHAMAN" then
     ob["V"] = "SPELL Lightning Shield"
-    ob["Q"] = "SPELL Astral Shift"
+    ob["Q"] = "SPELL Shamanistic Rage"
     ob["G"] = "SPELL Ascendance"
     ob["U"] = "SPELL Far Sight"
     ob["F"] = "SPELL Shamanistic Rage"
