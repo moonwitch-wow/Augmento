@@ -89,44 +89,53 @@ end
 -- Sell your shit
 
 function Augmento.MERCHANT_SHOW(...)
-   -- Auto-Repair from guild without shiftkey, if shiftkey is down, don't repair at all.
-   if not CanMerchantRepair() or IsShiftKeyDown() then
-      return
-   else
-      if (IsInGuild() and CanGuildBankRepair() and not IsShiftKeyDown()) then -- can we repair from this dude?
-         RepairAllItems(CanGuildBankRepair() and GetGuildBankWithdrawMoney() >= GetRepairAllCost())
-         if GetRepairAllCost() > 0 then
-            print('Guild repaired for : '.. money_to_string(GetRepairAllCost()))
-         end
-      else
-         RepairAllItems()
-         if GetRepairAllCost() > 0 then
-            print('Repaired for : '.. money_to_string(GetRepairAllCost()))
-         end
-      end
-   end
    print('Merchant show triggered')
 
-   -- sell off junk
-   local bag, slot
-   local valueSold = 0, 0
+   if IsShiftKeyDown() then return end
 
+   local junks, profit = 0, 0
    for bag = 0, 4 do
       for slot = 0, GetContainerNumSlots(bag) do
-         local _, count, _, _, _, _, link = GetContainerItemInfo(bag, slot)
+         local _, quantity, _, _, _, _, link = GetContainerItemInfo(bag, slot)
          if link then
-            local _, _, quality, _, _, _, _, _, _, _, vendorPrice = GetItemInfo(link)
-
-            if quality == 0 and vendorPrice > 0 then
-               ShowContainerSellCursor(bag, slot)
+            local _, _, quality, _, _, _, _, _, _, _, value = GetItemInfo(link)
+            if quality == ITEM_QUALITY_POOR then
+               junks = junks + 1
+               profit = profit + value
                UseContainerItem(bag, slot)
-               valueSold = valueSold + vendorPrice * count
             end
          end
       end
    end
+   if profit > 0 then
+      self:Print("Sold %d junk items for %s.", junks, GetCoinTextureString(profit))
+   end
 
-   if valueSold > 0 then
-      print('Sold Junk : ', money_to_string(valueSold))
+   if CanMerchantRepair() then
+      local repairAllCost, canRepair = GetRepairAllCost()
+      if canRepair and repairAllCost > 0 then
+         if db.repairFromGuild and CanGuildBankRepair() then
+            local amount = GetGuildBankWithdrawMoney()
+            local guildBankMoney = GetGuildBankMoney()
+            if amount == -1 then
+               amount = guildBankMoney
+            else
+               amount = min(amount, guildBankMoney)
+            end
+            if amount > repairAllCost then
+               RepairAllItems(1)
+               self:Print("Repaired all items for %s from guild bank funds.", GetCoinTextureString(repairAllCost))
+               return
+            else
+               self:Print("Insufficient guild bank funds to repair!")
+            end
+         elseif GetMoney() > repairAllCost then
+            RepairAllItems()
+            self:Print("Repaired all items for %s.", GetCoinTextureString(repairAllCost))
+            return
+         else
+            self:Print("Insufficient funds to repair!")
+         end
+      end
    end
 end
