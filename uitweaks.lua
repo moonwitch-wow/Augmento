@@ -116,6 +116,7 @@ function Augmento.MERCHANT_SHOW(...)
          end
       end
    end
+   print('Merchant show triggered')
 
    -- sell off junk
    local bag, slot
