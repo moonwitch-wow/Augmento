@@ -88,17 +88,6 @@ end
 ------------------------------------------------------------------------
 -- Sell your shit
 
--- Parse Gold/Silver/Copper
-local function money_to_string(value)
-  if value == 0 then return nil end
-
-  local gold = math.floor(value / 10000)
-  local silver = mod(math.floor(value / 100), 100)
-  local copper = mod(value, 100)
-
-  return string.format("|cffffd700%i|r.|cffc7c7cf%02i|r.|cffeda55f%02i|r", gold, silver, copper)
-end
-
 function Augmento.MERCHANT_SHOW(...)
    -- Auto-Repair from guild without shiftkey, if shiftkey is down, don't repair at all.
    if not CanMerchantRepair() or IsShiftKeyDown() then
