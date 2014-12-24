@@ -128,12 +128,16 @@ function ApplyMyOverrideBindings(silent)
     -- [[ Priest Bindings ]] --
   elseif class == "PRIEST" then
     ob["Q"] = "MACRO Pr01"
-    ob["G"] = "MACRO Pr02"
+    ob["G"] = "SPELL Fade"
     ob["E"] = "SPELL Mass Dispell"
 
     ob["SHIFT-C"] = "SPELL Psychic Scream"
+    ob["SHIFT-G"] = "MACRO LoF"
+
+    ob["ALT-G"] = "MACRO Levitate"
 
     -- Shadow
+    if specName == "Shadow" then
     ob["X"] = "SPELL Shadow Word: Death"
     ob["|"] = "SPELL Shadowform"
 
