@@ -60,7 +60,7 @@ InterfaceOptions_AddCategory(Panel)
 
 -----------------------------
 -- Adding a SlashCommand to open the correct Panel
-SLASH_Addonname1 = '/Augmento'
-SlashCmdList[Augmento] = function()
+SLASH_AUGMENTO1 = '/augmento'
+SlashCmdList["Augmento"] = function()
    InterfaceOptionsFrame_OpenToCategory(Augmento)
 end
