@@ -149,27 +149,28 @@ function ApplyMyOverrideBindings(silent)
 
     -- ob["SHIFT-X"] = "SPELL Spirit Shell"
     -- ob["SHIFT-H"] = "SPELL LoF"
-
+    end
     -- [[ Shaman Bindings ]] --
   elseif class == "SHAMAN" then
-    ob["V"] = "SPELL Lightning Shield"
-    ob["Q"] = "SPELL Shamanistic Rage"
+    -- base
+    ob["Q"] = "MACRO NO"
     ob["G"] = "SPELL Ascendance"
     ob["U"] = "SPELL Far Sight"
-    ob["F"] = "SPELL Shamanistic Rage"
-
-    ob["SHIFT-V"] = "SPELL Water Shield"
-    ob["SHIFT-Q"] = "SPELL Gift of the Naaru"
 
     -- Since I rebind my F keys ..
     ob["§"] = "FOCUSTARGET"
     ob["SHIFT-§"] = "TARGETFOCUS"
 
     -- Elemental
+    if specName == "Elemental" then
+      ob["V"] = "SPELL Lightning Shield"
+      ob["SHIFT-V"] = "SPELL Water Shield"
+      ob["F"] = "SPELL Shamanistic Rage"
+
     ob["F1"] = "SPELL Searing Totem"
     ob["F2"] = "SPELL Earth Elemental Totem"
     ob["F3"] = "SPELL Healing Stream Totem"
-    ob["F4"] = "SPELL Stormlash Totem"
+      ob["F4"] = "SPELL Capacitor Totem"
 
     ob["CTRL-F1"] = "SPELL Fire Elemental Totem"
     ob["CTRL-F2"] = "SPELL Tremor Totem"
@@ -180,10 +181,26 @@ function ApplyMyOverrideBindings(silent)
     ob["SHIFT-F2"] = "SPELL Totemic Projection"
 
     ob["ALT-F2"] = "SPELL Earthgrab Totem"
+      ob["SHIFT-Q"] = "SPELL Gift of the Naaru"
+    elseif specName == "Restoration" then
+      ob["V"] = "SPELL Water Shield"
+      ob["SHIFT-V"] = "SPELL Lightning Shield"
 
-    -- Enhancement
+      ob["Q"] = "MACRO NO"
 
-    -- Resto
+      ob["F1"] = "SPELL Searing Totem"
+      ob["F2"] = "SPELL Earth Elemental Totem"
+      ob["F3"] = "SPELL Healing Stream Totem"
+      ob["F4"] = "SPELL Windwalk Totem"
+
+      ob["CTRL-F1"] = "SPELL Fire Elemental Totem"
+      ob["CTRL-F2"] = "SPELL Spirit Link Totem"
+      ob["CTRL-F3"] = "SPELL Healing Tide Totem"
+      ob["CTRL-F4"] = "SPELL Capacitor Totem"
+
+      ob["SHIFT-F1"] = "SPELL Totemic Recall"
+      ob["SHIFT-F2"] = "SPELL Totemic Projection"
+    end
 
   elseif class == "WARLOCK" then
     ob["Q"] = "SPELL Life Tap"
