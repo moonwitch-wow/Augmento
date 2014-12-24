@@ -22,8 +22,10 @@ function Augmento.PLAYER_ENTERING_WORLD(...)
   print('|cffff6000Augmento:|r Successfully initialized settings')
 end
 
-function Augmento.PLAYER_LOGOUT(...)
-  -- Handle eventual logout events here.
+-- To change keybinds when I respec.. Caused me some fuckups today ;)
+function Augmento.ACTIVE_TALENT_GROUP_CHANGED(...)
+  ApplyMyOverrideBindings(true)
+  print("Changed bindings for spec")
 end
 
 ------------------------------------------------------------------------
