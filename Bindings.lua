@@ -91,6 +91,8 @@ end
 function ApplyMyOverrideBindings(silent)
   local _, class = UnitClass("player")
   local _, race = UnitRace("player")
+  local curSpec = GetSpecialization()
+  local specName = curSpec and select(2, GetSpecializationInfo(curSpec)) or "None"
   local ob = {
     -- ["ALT-Q"] = "MACRO QuestItem",
     -- ["ALT-`"] = "ITEM Hearthstone",
@@ -190,6 +192,7 @@ function ApplyMyOverrideBindings(silent)
 
   if not silent then
     print("Override bindings applied.")
+    print("Active Spec is " .. specName)
   end
 end
 
