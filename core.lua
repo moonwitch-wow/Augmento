@@ -11,8 +11,8 @@ local handler = CreateFrame("Frame")
 ------------------------------------------------------------------------
 function Augmento.PLAYER_ENTERING_WORLD(...)
   ApplyMyBindings(true)
-  ApplyMyOverrideBindings(true)
-  ApplyDefaultActionBindings(nil, false)
+  ApplyMyOverrideBindings(false)
+  ApplyDefaultActionBindings(nil, true)
   SaveBindings(1) -- 1: Account Wide, 2: Character Wide
 
   -- Augmento.ApplyUITweaks()
