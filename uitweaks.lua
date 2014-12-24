@@ -2,6 +2,7 @@
 -- Setting up the local scope so we can work in modules
 ------------------------------------------------------------------------
 local _, Augmento = ...
+local noop = function() end -- blargh
 
 local soundFile = [=[Sound\Interface\ReadyCheck.wav]=]
 
@@ -32,17 +33,17 @@ function Augmento.ADDON_LOADED(addon)
 end
 
 ------------------------------------------------------------------------
--- Toggle nameplates on while in combat and sound a bell.
+-- Toggle nameplates based on Combat
+------------------------------------------------------------------------
+-- function Augmento.PLAYER_REGEN_DISABLED(...)
+--    SetCVar("nameplateShowEnemies", 1)
+--    UIErrorsFrame:AddMessage('+ Combat', 1, 1, 1)
+-- end
 
-function Augmento.PLAYER_REGEN_DISABLED(...)
-   SetCVar("nameplateShowEnemies", 1)
-   UIErrorsFrame:AddMessage('+ Combat', 1, 1, 1)
-end
-
-function Augmento.PLAYER_REGEN_ENABLED(...)
-   SetCVar("nameplateShowEnemies", 0)
-   UIErrorsFrame:AddMessage('- Combat', 1, 1, 1)
-end
+-- function Augmento.PLAYER_REGEN_ENABLED(...)
+--    SetCVar("nameplateShowEnemies", 0)
+--    UIErrorsFrame:AddMessage('- Combat', 1, 1, 1)
+-- end
 
 ------------------------------------------------------------------------
 -- Gimme a sound on :
@@ -50,7 +51,6 @@ end
 -- PARTY INVITE
 -- RAID BOSS START
 ------------------------------------------------------------------------
-
 function Augmento.LFG_PROPOSAL_SHOW()
    PlaySoundFile(soundFile, 'Master')
 end
@@ -84,12 +84,11 @@ function Augmento.CINEMATIC_STOP()
    SetCVar('Sound_EnableSFX', 1)
 end
 
-
 ------------------------------------------------------------------------
--- Sell your shit
-
+-- Selling greys and auto-repair
+------------------------------------------------------------------------
 function Augmento.MERCHANT_SHOW(...)
-   print('Merchant show triggered')
+   --print('Merchant show triggered')
 
    if IsShiftKeyDown() then return end
 
@@ -99,7 +98,7 @@ function Augmento.MERCHANT_SHOW(...)
          local _, quantity, _, _, _, _, link = GetContainerItemInfo(bag, slot)
          if link then
             local _, _, quality, _, _, _, _, _, _, _, value = GetItemInfo(link)
-            if quality == ITEM_QUALITY_POOR then
+            if quality == LE_ITEM_QUALITY_POOR then
                junks = junks + 1
                profit = profit + value
                UseContainerItem(bag, slot)
@@ -108,13 +107,13 @@ function Augmento.MERCHANT_SHOW(...)
       end
    end
    if profit > 0 then
-      self:Print("Sold %d junk items for %s.", junks, GetCoinTextureString(profit))
+      print(format("Sold %s junk items for %s.", junks, GetMoneyString(profit)))
    end
 
    if CanMerchantRepair() then
       local repairAllCost, canRepair = GetRepairAllCost()
       if canRepair and repairAllCost > 0 then
-         if db.repairFromGuild and CanGuildBankRepair() then
+         if CanGuildBankRepair() and not IsAltKeyDown() then
             local amount = GetGuildBankWithdrawMoney()
             local guildBankMoney = GetGuildBankMoney()
             if amount == -1 then
@@ -124,17 +123,17 @@ function Augmento.MERCHANT_SHOW(...)
             end
             if amount > repairAllCost then
                RepairAllItems(1)
-               self:Print("Repaired all items for %s from guild bank funds.", GetCoinTextureString(repairAllCost))
+               print(format("Repaired all items for %s from guild bank funds.", GetMoneyString(repairAllCost)))
                return
             else
-               self:Print("Insufficient guild bank funds to repair!")
+               print("Insufficient guild bank funds to repair!")
             end
          elseif GetMoney() > repairAllCost then
             RepairAllItems()
-            self:Print("Repaired all items for %s.", GetCoinTextureString(repairAllCost))
+            print(format("Repaired all items for %s.", GetMoneyString(repairAllCost)))
             return
          else
-            self:Print("Insufficient funds to repair!")
+            print("Insufficient funds to repair!")
          end
       end
    end
