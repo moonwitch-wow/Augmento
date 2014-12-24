@@ -5,7 +5,6 @@ local _, Augmento = ...
 
 ------------------------------------------------------------------------
 -- AutoAccept Friends and Guilds party invites
-
 function Augmento.PARTY_INVITE_REQUEST(name, l, f, g)
    if(QueueStatusMinimapButton:IsShown()) then return end
    if(l or f or g) then return end

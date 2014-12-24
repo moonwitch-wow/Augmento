@@ -157,7 +157,7 @@ function ApplyMyOverrideBindings(silent)
     ob["G"] = "SPELL Ascendance"
     ob["U"] = "SPELL Far Sight"
 
-    -- Since I rebind my F keys ..
+      -- Since I rebind my F keys ..
     ob["§"] = "FOCUSTARGET"
     ob["SHIFT-§"] = "TARGETFOCUS"
 
@@ -167,20 +167,20 @@ function ApplyMyOverrideBindings(silent)
       ob["SHIFT-V"] = "SPELL Water Shield"
       ob["F"] = "SPELL Shamanistic Rage"
 
-    ob["F1"] = "SPELL Searing Totem"
-    ob["F2"] = "SPELL Earth Elemental Totem"
-    ob["F3"] = "SPELL Healing Stream Totem"
+      ob["F1"] = "SPELL Searing Totem"
+      ob["F2"] = "SPELL Earth Elemental Totem"
+      ob["F3"] = "SPELL Healing Stream Totem"
       ob["F4"] = "SPELL Capacitor Totem"
 
-    ob["CTRL-F1"] = "SPELL Fire Elemental Totem"
-    ob["CTRL-F2"] = "SPELL Tremor Totem"
-    ob["CTRL-F3"] = "SPELL Healing Tide Totem"
-    ob["CTRL-F4"] = "SPELL Windwalk Totem"
+      ob["CTRL-F1"] = "SPELL Fire Elemental Totem"
+      ob["CTRL-F2"] = "SPELL Tremor Totem"
+      ob["CTRL-F3"] = "SPELL Healing Tide Totem"
+      ob["CTRL-F4"] = "SPELL Windwalk Totem"
 
-    ob["SHIFT-F1"] = "SPELL Totemic Recall"
-    ob["SHIFT-F2"] = "SPELL Totemic Projection"
+      ob["SHIFT-F1"] = "SPELL Totemic Recall"
+      ob["SHIFT-F2"] = "SPELL Totemic Projection"
 
-    ob["ALT-F2"] = "SPELL Earthgrab Totem"
+      ob["ALT-F2"] = "SPELL Earthgrab Totem"
       ob["SHIFT-Q"] = "SPELL Gift of the Naaru"
     elseif specName == "Restoration" then
       ob["V"] = "SPELL Water Shield"
