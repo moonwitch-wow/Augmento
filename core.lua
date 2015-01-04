@@ -10,22 +10,8 @@ local handler = CreateFrame("Frame")
 -- Functions - functions named after events for easy event tracking
 ------------------------------------------------------------------------
 function Augmento.PLAYER_ENTERING_WORLD(...)
-  ApplyMyBindings(true)
-  ApplyMyOverrideBindings(false)
-  ApplyDefaultActionBindings(nil, true)
-  SaveBindings(1) -- 1: Account Wide, 2: Character Wide
-
-  -- Augmento.ApplyUITweaks()
-  SystemFont_Shadow_Small:SetFont(STANDARD_TEXT_FONT, 12) -- changing the macro font, it's too damn small
-
   Augmento.Init()
   print('|cffff6000Augmento:|r Successfully initialized settings')
-end
-
--- To change keybinds when I respec.. Caused me some fuckups today ;)
-function Augmento.ACTIVE_TALENT_GROUP_CHANGED(...)
-  ApplyMyOverrideBindings(true)
-  print("Changed bindings for spec")
 end
 
 ------------------------------------------------------------------------
