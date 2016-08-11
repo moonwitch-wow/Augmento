@@ -1,0 +1,477 @@
+"Sound_DialogVolume" is "0.10000000149012" (default "1.0")
+"Sound_EnableDSPEffects" is "0" (default "1")
+"Sound_EnableSoundWhenGameIsInBG" is "1" (default "0")
+"synchronizeSettings" is "0" (default "1")
+"realmName" is "Thunderhorn"
+"synchronizeConfig" is "0" (default "1")
+"synchronizeBindings" is "0" (default "1")
+"synchronizeMacros" is "0" (default "1")
+"gameTip" is "40"
+"showGameTips" is "0"
+"taintLog" is "1"
+"Sound_EnableMusic" is "0" (default "1")
+"bloatTest" is "0"
+"expandUpgradePanel" is "0" (default "1")
+"weatherDensity" is "3.000000" (default "2")
+"Sound_OutputDriverIndex" is "1" (default "0")
+"Sound_OutputDriverName" is "Speakers (Realtek High Definition Audio)" (default "Primary Sound Driver")
+"repositionfrequency" is "0"
+"Sound_ZoneMusicNoDelay" is "1" (default "0")
+"lastCharacterIndex" is "9" (default "0")
+"gxRefresh" is "50000/1000" (default "60000/1001")
+"horizonStart" is "1900.000000" (default "800")
+"particleMTDensity" is "100.000000" (default "100")
+"rippleDetail" is "1.000000" (default "2")
+"reflectionMode" is "0.000000" (default "3")
+"shadowSoft" is "0.000000" (default "0")
+"DepthBasedOpacity" is "1.000000" (default "1")
+"terrainTextureLod" is "0.000000" (default "0")
+"terrainMipLevel" is "0.000000" (default "0")
+"worldBaseMip" is "0.000000" (default "0")
+"lightMode" is "2.000000" (default "2")
+"lodObjectCullSize" is "18.000000" (default "15")
+"lodObjectMinSize" is "54.000000" (default "20")
+"RAIDDepthBasedOpacity" is "1.000000" (default "1")
+"RAIDterrainTextureLod" is "0.000000" (default "0")
+"RAIDterrainMipLevel" is "0.000000" (default "0")
+"RAIDworldBaseMip" is "0.000000" (default "0")
+"RAIDshadowSoft" is "0.000000" (default "0")
+"RAIDparticleMTDensity" is "100.000000" (default "100")
+"RAIDLightMode" is "2.000000" (default "2")
+"RAIDlodObjectCullSize" is "18.000000" (default "15")
+"RAIDlodObjectCullDist" is "30.000000" (default "30")
+"RAIDlodObjectMinSize" is "54.000000" (default "20")
+"RAIDweatherDensity" is "3.000000" (default "2")
+"graphicsTextureResolution" is "3.000000" (default "5")
+"graphicsTextureFiltering" is "6.000000" (default "5")
+"graphicsProjectedTextures" is "2.000000" (default "2")
+"graphicsEnvironmentDetail" is "7" (default "6")
+"graphicsGroundClutter" is "7" (default "6")
+"graphicsShadowQuality" is "4.000000" (default "5")
+"graphicsLiquidDetail" is "3.000000" (default "4")
+"graphicsSunshafts" is "3.000000" (default "3")
+"graphicsParticleDensity" is "3.000000" (default "3")
+"graphicsSSAO" is "4.000000" (default "4")
+"graphicsDepthEffects" is "4.000000" (default "4")
+"graphicsLightingQuality" is "3.000000" (default "3")
+"graphicsOutlineMode" is "3.000000" (default "3")
+"raidGraphicsTextureResolution" is "3.000000" (default "3")
+"raidGraphicsTextureFiltering" is "6.000000" (default "4")
+"raidGraphicsProjectedTextures" is "2.000000" (default "1")
+"raidGraphicsViewDistance" is "7" (default "5")
+"raidGraphicsEnvironmentDetail" is "7" (default "6")
+"raidGraphicsGroundClutter" is "7" (default "6")
+"raidGraphicsShadowQuality" is "4.000000" (default "3")
+"raidGraphicsLiquidDetail" is "3.000000" (default "2")
+"raidGraphicsSunshafts" is "3.000000" (default "1")
+"raidGraphicsParticleDensity" is "3.000000" (default "2")
+"raidGraphicsSSAO" is "4.000000" (default "2")
+"raidGraphicsDepthEffects" is "4.000000" (default "1")
+"raidGraphicsLightingQuality" is "3.000000" (default "2")
+"raidGraphicsOutlineMode" is "3.000000" (default "1")
+"ChatMusicVolume" is "0.29999998211861" (default "0.3")
+"Sound_NumChannels" is "24" (default "32")
+"fctCombatState" is "1"
+"fctDodgeParryMiss" is "1"
+"fctRepChanges" is "1"
+"fctComboPoints" is "1"
+"fctAuras" is "1"
+"fctSpellMechanics" is "1"
+"playerStatusText" is "1"
+"petStatusText" is "1"
+"partyStatusText" is "1"
+"petStatusText" is "1"
+"partyStatusText" is "1"
+"targetStatusText" is "1"
+"alternateResourceText" is "1"
+"CACHE-WQST-QuestV2RecordCount" is "28461"
+"CACHE-WQST-QuestV2HotfixCount" is "0"
+"CACHE-WQST-QuestObjectiveRecordCount" is "28160"
+"CACHE-WQST-QuestObjectiveHotfixCount" is "0"
+"CACHE-WQST-QuestObjectiveXEffectRecordCount" is "7077"
+"CACHE-WQST-QuestObjectiveXEffectHotfixCount" is "0"
+"CACHE-WGOB-GameObjectsRecordCount" is "54147"
+"CACHE-WGOB-GameObjectsHotfixCount" is "0"
+"gxApi" is "D3D11" (default "auto")
+"Sound_EnableAmbience" is "0" (default "1")
+"serverAlert" is "SERVER_ALERT_URL"
+"overrideArchive" is "0"
+"simd" is "255"
+"processAffinityMask" is "0"
+"streamingCameraRadius" is "100"
+"streamingCameraMaxRadius" is "250"
+"streamingCameraLookAheadTime" is "2000"
+"disableAutoRealmSelect" is "0"
+"initialRealmListTimeout" is "60"
+"webChallengeURLTimeout" is "60"
+"asyncThreadSleep" is "0"
+"asyncHandlerTimeout" is "100"
+"enableBGDL" is "1"
+"maxFPS" is "100"
+"maxFPSBk" is "30"
+"gxAdapter" is "-1"
+"gxDepthResolveHandleCaching" is "1"
+"gxAFRDevicesCount" is "0"
+"gxMonitor" is "0"
+"gxFullscreenResolution" is "1920x1080"
+"gxWindowedResolution" is "1920x1080"
+"gxNewResolution" is "0x0"
+"gxPreferWindowedFullscreen" is "0"
+"gxTripleBuffer" is "0"
+"gxVSync" is "0"
+"gxAspect" is "1"
+"gxCursor" is "1"
+"gxFixLag" is "0"
+"gxMaxFrameLatency" is "3"
+"gxStereoEnabled" is "0"
+"windowResizeLock" is "0"
+"gxStereoConvergence" is "1"
+"gxStereoSeparation" is "25"
+"M2UseThreads" is "1"
+"M2ForceAdditiveParticleSort" is "0"
+"M2UseInstancing" is "1"
+"  "M2UseLOD" is "1"
+"detailDoodadInstancing" is "1"
+"nearclip" is "0.2"
+"reflectionDownscale" is "0"
+"bspcache" is "0"
+"worldPoolUsage" is "(null)"
+"terrainAlphaBitDepth" is "8"
+"groundEffectFade" is "70"
+"hwPCF" is "1"
+"gxTextureCacheSize" is "0"
+"maxLightCount" is "128"
+"maxLightDist" is "2048"
+"SSAODistance" is "100.0f"
+"preloadStreamingDistTerrain" is "256"
+"preloadStreamingDistObject" is "64"
+"preloadLoadingDistTerrain" is "1024"
+"preloadLoadingDistObject" is "512"
+"SkyCloudLOD" is "0"
+"wmoDoodadDist" is "2000"
+"entityLodDist" is "20"
+"doodadLodDist" is "150"
+"worldMaxMipLevel" is "12"
+"terrainHoles" is "0"
+"physicsLevel" is "1"
+"minimapPortalMax" is "99"
+"RenderScale" is "1.0"
+"ResampleQuality" is "0"
+"MSAAQuality" is "0"
+"MSAAAlphaTest" is "1"
+"LodLiquid" is "1"
+"lodTerrainDiv" is "768"
+"RAIDsettingsEnabled" is "0"
+"RAIDgroundEffectFade" is "70"
+"RAIDhorizonStart" is "800"
+"componentThread" is "1"
+"componentCompress" is "1"
+"componentTexLoadLimit" is "6"
+"componentTexCacheSize" is "20"
+"componentSpecular" is "1"
+"componentEmissive" is "1"
+"graphicsViewDistance" is "7"
+"warp" is "0"
+"warpScreenSize" is ".52"
+"warpViewDistance" is ".2"
+"warpViewTilt" is ".05"
+"allowD3D9BackingStore" is "0"
+"shadowCull" is "1"
+"shadowScissor" is "1"
+"shadowInstancing" is "1"
+"hbaoNormals" is "1"
+"hbaoBias" is "0.45"
+"hbaoRadius" is "2.2"
+"hbaoPowerExp" is "2.4"
+"hbaoBlurSharp" is "4.0"
+"animFrameSkipLOD" is "0"
+"hotReloadModels" is "1"
+"forceLODCheck" is "0"
+"BrowserNavigateLog" is "0"
+"raidOrBattleCount" is "0"
+"fullDump" is "0"
+"Errors" is "0"
+"showErrors" is "1"
+"ErrorLevelMin" is "2"
+"ErrorLevelMax" is "3"
+"ErrorFilter" is "all"
+"DesktopGamma" is "0"
+"readScanning" is "0"
+"readContest" is "0"
+"seenCharacterUpgradePopup" is "0"
+"useIPv6" is "0"
+"disableServerNagle" is "1"
+"advancedCombatLogging" is "0"
+"bnetLogSeverity" is "1"
+"skipStartGear" is "0"
+"hdPlayerModels" is "1"
+"preloadPlayerModels" is "1"
+"ChatSoundVolume" is "0.4"
+"ChatAmbienceVolume" is "0.3"
+"StartTalkingDelay" is "0.0"
+"StartTalkingTime" is "1.0"
+"StopTalkingDelay" is "0.0"
+"StopTalkingTime" is "2.0"
+"OutboundChatVolume" is "1.0"
+"InboundChatVolume" is "1.0"
+"VoiceChatMode" is "0"
+"EnableVoiceChat" is "0"
+"VoiceChatSelfMute" is "0"
+"PushToTalkButton" is "`"
+"Sound_EnableReverb" is "0"
+"Sound_VoiceChatInputDriverIndex" is "0"
+"Sound_VoiceChatInputDriverName" is "Primary Sound Capture Driver"
+"Sound_VoiceChatOutputDriverIndex" is "0"
+"Sound_VoiceChatOutputDriverName" is "Primary Sound Driver"
+"Sound_DSPBufferSize" is "0"
+"Sound_OutputSampleRate" is "44100"
+"Sound_EnableMode2" is "0"
+"Sound_EnableMixMode2" is "0"
+"Sound_EnableSFX" is "1"
+"Sound_EnableErrorSpeech" is "1"
+"Sound_EnablePetBattleMusic" is "1"
+"Sound_EnableAllSound" is "1"
+"Sound_EnableDialog" is "1"
+"Sound_ListenerAtCharacter" is "1"
+"Sound_EnableEmoteSounds" is "1"
+"Sound_EnableArmorFoleySoundForSelf" is "1"
+"Sound_EnableArmorFoleySoundForOthers" is "1"
+"Sound_EnablePetSounds" is "1"
+"Sound_MaxCacheSizeInBytes" is "67108864"
+"Sound_MaxCacheableSizeInBytes" is "1048576"
+"FootstepSounds" is "1"
+"SoundUseNewBusSystem" is "1"
+"debugSoundPlayerSpellsOnlyOnPlayerBus" is "1"
+"SoundPerf_VariationCap" is "32"
+"Sound_EnablePositionalLowPassFilter" is "0"
+"enableWowMouse" is "0"
+"ffxRectangle" is "1"
+"ffxAntiAliasingMode" is "0"
+"daltonize" is "1"
+"colorblindWeaknessFactor" is "0.5"
+"colorblindSimulator" is "0"
+"forceEnglishNames" is "0"
+"synchronizeChatFrames" is "1"
+
+CHAR SPECIFIC
+"UberTooltips" is "1"
+"showTutorials" is "0" (default "1")
+"showNPETutorials" is "0" (default "1")
+"raidOptionSortMode" is "role"
+"raidOptionKeepGroupsTogether" is "0"
+"raidOptionLocked" is "lock"
+"raidOptionDisplayPets" is "0"
+"raidOptionDisplayMainTankAndAssist" is "1"
+"raidOptionIsShown" is "1"
+"raidFramesDisplayAggroHighlight" is "1"
+"raidFramesDisplayOnlyDispellableDebuffs" is "0"
+"raidFramesDisplayPowerBars" is "0"
+"raidFramesPosition" is ""
+"raidFramesHeight" is "36"
+"raidFramesWidth" is "72"
+"raidFramesHealthText" is "none"
+"raidOptionShowBorders" is "1"
+"raidFramesDisplayClassColor" is "0"
+"calendarShowWeeklyHolidays" is "1"
+"calendarShowDarkmoon" is "1"
+"calendarShowBattlegrounds" is "1" (default "0")
+"calendarShowLockouts" is "1"
+"calendarShowResets" is "1" (default "0")
+"nameplateShowSelf" is "1"
+"nameplateShowEnemies" is "1"
+"nameplateShowEnemyMinions" is "0"
+"nameplateShowEnemyPets" is "1" (default "0")
+"nameplateShowEnemyGuardians" is "0"
+"nameplateShowEnemyTotems" is "0"
+"nameplateShowEnemyMinus" is "1"
+"nameplateShowFriends" is "0"
+"nameplateShowFriendlyMinions" is "0"
+"nameplateShowFriendlyPets" is "0"
+"nameplateShowFriendlyGuardians" is "0"
+"nameplateShowFriendlyTotems" is "0"
+"nameplateShowAll" is "0"
+"unitHighlights" is "1"
+"enablePVPNotifyAFK" is "1"
+"serviceTypeFilter" is "6"
+"autojoinPartyVoice" is "1"
+"autojoinBGVoice" is "0"
+"PushToTalkSound" is "0"
+"showBattlefieldMinimap" is "0"
+"playerStatLeftDropdown" is ""
+"playerStatRightDropdown" is ""
+"talentFrameShown" is "1" (default "0")
+"talentPointsSpent" is "0"
+"auctionDisplayOnCharacter" is "1" (default "0")
+"addFriendInfoShown" is "1" (default "0")
+"pendingInviteInfoShown" is "0"
+"guildRosterView" is ""
+"timeMgrUseMilitaryTime" is "1" (default "0")
+"timeMgrUseLocalTime" is "1" (default "0")
+"timeMgrAlarmTime" is "0"
+"timeMgrAlarmMessage" is ""
+"timeMgrAlarmEnabled" is "0"
+"combatLogRetentionTime" is "300"
+"combatLogReducedRetentionTime" is "60"
+"currencyTokensUnused1" is "0"
+"currencyTokensUnused2" is "0"
+"currencyTokensBackpack1" is "0"
+"currencyTokensBackpack2" is "0"
+"currencyCategoriesCollapsed" is "v" (default "0")
+"showTokenFrame" is "1" (default "0")
+"showTokenFrameHonor" is "0"
+"predictedHealth" is "1"
+"predictedPower" is "1"
+"threatWarning" is "3"
+"threatWorldText" is "1"
+"threatShowNumeric" is "1" (default "0")
+"threatPlaySounds" is "1"
+"violenceLevel" is "2"
+"lfgSelectedRoles" is "0"
+"lfdCollapsedHeaders" is ""
+"lfdSelectedDungeons" is ""
+"pvpSelectedRoles" is "0"
+"lfgListSearchLanguages" is "0"
+"lastTalkedToGM" is ""
+"autoCompleteResortNamesOnRecency" is "1"
+"autoCompleteWhenEditingFromCenter" is "1"
+"autoCompleteUseContext" is "1"
+"colorChatNamesByClass" is "0"
+"autoFilledMultiCastSlots" is "0"
+"minimapTrackedInfov2" is "229384" (default "491528")
+"minimapShapeshiftTracking" is "v" (default "")
+"showTamers" is "1"
+"primaryProfessionsFilter" is "1"
+"secondaryProfessionsFilter" is "1"
+"questPOI" is "1"
+"digSites" is "1"
+"miniWorldMap" is "1"
+"reputationsCollapsed" is "v##$" (default "")
+"dontShowEquipmentSetsOnItems" is "0"
+"guildNewsFilter" is "0"
+"ActionButtonUseKeyDown" is "1"
+"lfGuildSettings" is "1"
+"lfGuildComment" is ""
+"activeCUFProfile" is "Primary" (default "")
+"lastVoidStorageTutorial" is "0"
+"lastGarrisonMissionTutorial" is "8" (default "0")
+"shipyardMissionTutorialFirst" is "0"
+"shipyardMissionTutorialBlockade" is "0"
+"shipyardMissionTutorialAreaBuff" is "0"
+"orderHallMissionTutorial" is "0"
+"minimapShowQuestBlobs" is "1"
+"minimapShowArchBlobs" is "1"
+"closedInfoFrames" is "@ab|" (default "")
+"dangerousShipyardMissionWarningAlreadyShown" is "0"
+"petJournalFilters" is "B" (default "")
+"petJournalTypeFilters" is ""
+"petJournalSourceFilters" is ""
+"petJournalSort" is "1" (default "0")
+"mountJournalFilters" is "D" (default "")
+"mountJournalSourceFilters" is ""
+"toyBoxCollectedFilters" is "B" (default "0")
+"toyBoxSourceFilters" is "0"
+"heirloomCollectedFilters" is "" (default "0")
+"heirloomSourceFilters" is "0"
+"transmogrifySourceFilters" is "0"
+"wardrobeSourceFilters" is "0"
+"transmogrifyShowCollected" is "1"
+"transmogrifyShowUncollected" is "0"
+"wardrobeShowCollected" is "1"
+"wardrobeShowUncollected" is "1"
+"missingTransmogSourceInItemTooltips" is "0"
+"lastTransmogOutfitID" is ""
+"petJournalTab" is "5" (default "1")
+"EJLootClass" is "5" (default "-1")
+"EJLootSpec" is "0"
+"EJRaidDifficulty" is "14" (default "0")
+"EJDungeonDifficulty" is "2" (default "0")
+"transmogCurrentSpecOnly" is "0"
+"pvpBlacklistMaps0" is "0"
+"pvpBlacklistMaps1" is "0"
+"displayedRAFFriendInfo" is "0"
+"Outline" is "2"
+"EmitterCombatRange" is "900"
+"NonEmitterCombatRange" is "6400"
+"advJournalLastOpened" is "1470863053" (default "0")
+"hideAdventureJournalAlerts" is "0"
+"splashScreenNormal" is "6" (default "0")
+"splashScreenBoost" is "0"
+"seenAsiaCharacterUpgradePopup" is "0"
+"showSpectatorTeamCircles" is "1"
+"flashErrorMessageRepeats" is "1"
+"outdoorMinAltitudeDistance" is "20"
+"garrisonCompleteTalent" is "0"
+"garrisonCompleteTalentType" is "0"
+"ShowQuestUnitCircles" is "1"
+"spellClutter" is "1"
+"spellClutterRangeConstant" is "30.0"
+"spellClutterPlayerScalarMultiplier" is "1.66667"
+"spellClutterDefaultTargetScalar" is "3.0"
+"spellClutterPartySizeScalar" is "20.0"
+"spellClutterHostileScalar" is "0.5"
+"spellClutterMinSpellCount" is "1"
+"unitClutter" is "1"
+"unitClutterInstancesOnly" is "1"
+"unitClutterPlayerThreshold" is "10"
+"nameplateMaxDistance" is "60"
+"nameplateTargetBehindMaxDistance" is "15"
+"nameplateMotion" is "0"
+"nameplateMotionSpeed" is "0.025"
+"nameplateOverlapH" is "0.8"
+"nameplateOverlapV" is "1.1"
+"nameplateGlobalScale" is "1.0"
+"nameplateMinScale" is "0.8"
+"nameplateMaxScale" is "1.0"
+"nameplateLargerScale" is "1.2"
+"nameplateMinScaleDistance" is "10"
+"nameplateMaxScaleDistance" is "10"
+"nameplateMinAlpha" is ".5"
+"nameplateMaxAlpha" is "0.9"
+"nameplateMinAlphaDistance" is "10"
+"nameplateMaxAlphaDistance" is "10"
+"nameplateSelectedScale" is "1.0"
+"nameplateSelectedAlpha" is "1.0"
+"nameplateSelfScale" is "1.0"
+"nameplateSelfAlpha" is "0.75"
+"nameplateSelfBottomInset" is ".2"
+"nameplateSelfTopInset" is ".5"
+"nameplateOtherBottomInset" is ".1"
+"nameplateOtherTopInset" is ".08"
+"nameplateLargeBottomInset" is ".15"
+"nameplateLargeTopInset" is ".1"
+"nameplateClassResourceTopInset" is ".03"
+"ShowClassColorInNameplate" is "1"
+"ShowNamePlateLoseAggroFlash" is "1"
+"NamePlateHorizontalScale" is "1.0"
+"NamePlateVerticalScale" is "1.0"
+"TargetNearestUseOld" is "0"
+"TargetPriorityIncludeBehind" is "1"
+"TargetPriorityAllowAnyOnScreen" is "1"
+"TargetPriorityHoldHighlightDelay" is "300"
+"TargetPriorityCombatLock" is "1"
+"TargetPriorityCombatLockHighlight" is "0"
+"TargetPriorityPvp" is "1"
+"TargetPriorityPvpLock" is "1"
+"TargetPriorityPvpLockHighlight" is "0"
+"TargetPriorityValueBank" is "0"
+"ffxGlow" is "1"
+"PraiseTheSun" is "0"
+"uiScale" is "1.0"
+"useUiScale" is "0"
+"ObjectSelectionCircle" is "1"
+"outlineMouseOverFadeDuration" is "0.9"
+"outlineSelectionFadeDuration" is "0.32"
+"bodyQuota" is "100"
+"GameObjForceMouseOver" is "0"
+"MaxObservedPetBattles" is "4"
+"smoothUnitPhasing" is "1"
+"smoothUnitPhasingDistThreshold" is "0.25"
+"smoothUnitPhasingUnseenPurgatoryTimeMs" is "1000"
+"smoothUnitPhasingDestroyedPurgatoryTimeMs" is "750"
+"smoothUnitPhasingActorPurgatoryTimeMs" is "1500"
+"smoothUnitPhasingEnableAlive" is "1"
+"smoothUnitPhasingAliveTimeoutMs" is "3500"
+"smoothUnitPhasingVehicleExtraTimeoutMs" is "1000"
+"SplineOpt" is "1"
+"consolidateBuffs" is "0"
+"characterFrameCollapsed" is "0"

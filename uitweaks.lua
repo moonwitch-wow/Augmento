@@ -8,7 +8,7 @@ local soundFile = [=[Sound\Interface\ReadyCheck.wav]=]
 
 function Augmento.ApplyUITweaks()
    -- Fix Macro font
-   SystemFont_Shadow_Small:SetFont(STANDARD_TEXT_FONT, 12)
+
 end
 
 ------------------------------------------------------------------------
@@ -18,19 +18,6 @@ SLASH_RELOAD_UI1 = '/rl'
 
 SLASH_TICKETGM1 = '/gm'
 SlashCmdList.TICKETGM = ToggleHelpFrame
-
-------------------------------------------------------------------------
--- Filtering on Achievements and Guild
-------------------------------------------------------------------------
-function Augmento.ADDON_LOADED(addon)
-   if(addon == 'Blizzard_AchievementUI') then
-      AchievementFrame_SetFilter(3)
-   elseif(addon == 'Blizzard_GuildUI') then
-      GuildFrame:HookScript('OnShow', function()
-         GuildFrameTab2:Click()
-      end)
-   end
-end
 
 ------------------------------------------------------------------------
 -- Toggle nameplates based on Combat
@@ -138,3 +125,40 @@ function Augmento.MERCHANT_SHOW(...)
       end
    end
 end
+
+------------------------------------------------------------------------
+-- Auto-Accept Invites
+------------------------------------------------------------------------
+local IsFriend = function(name)
+	for i=1, GetNumFriends() do
+    if(GetFriendInfo(i)==name) then
+      return true
+    end
+  end
+	if(IsInGuild()) then
+    for i=1, GetNumGuildMembers() do
+      if(GetGuildRosterInfo(i)==name) then
+        return true
+      end
+    end
+  end
+end
+
+local ai = CreateFrame('Frame')
+ai:RegisterEvent('PARTY_INVITE_REQUEST')
+ai:SetScript('OnEvent', function(frame, event, name)
+  if(IsFriend(name)) then
+	   AcceptGroup()
+	    print('Group invitation from |cffFFC354'..name..'|r accepted.')
+		for i = 1, 4 do
+			local frame = _G['StaticPopup'..i]
+			if(frame:IsVisible() and frame.which=='PARTY_INVITE') then
+				frame.inviteAccepted = 1
+				StaticPopup_Hide('PARTY_INVITE')
+				return
+			end
+		end
+	else
+		SendWho(name)
+	end
+end)

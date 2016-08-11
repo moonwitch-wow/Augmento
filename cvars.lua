@@ -13,7 +13,7 @@ local cvars = {
    autoClearAFK = 1,
    autoDismount = 1, -- no UI
    autoUnshift = 1, -- no UI, cancels form if needed
-   autoDismountFlying = 1, -- I fall to my death too often
+   autoDismountFlying = 0, -- I fall to my death too often
    autoLootDefault = 1,
    autoOpenLootHistory = 1,
    autoStand = 1, -- no UI
@@ -22,6 +22,8 @@ local cvars = {
    deselectOnClick = 1, -- Sticky Targeting, 0 = ON, 1 = OFF
    interactOnLeftClick = 0,
    lootUnderMouse = 1,
+   autoOpenLootHistory = 1,
+   countdownForCooldowns "1"
 
    -- [[ Combat Options Panel ]] --
    ActionButtonUseKeyDown = 1,
@@ -99,51 +101,56 @@ local cvars = {
    UnitNameEnemyTotemName = 0,
    UnitNameForceHideMinus = 0,
 
-   nameplateShowFriends = 0,
-   nameplateShowFriendlyPets = 0,
-   nameplateShowFriendlyGuardians = 0,
-   nameplateShowFriendlyTotems = 0,
+   nameplateGlobalScale = 1.0, -- Needed to resolve a bug
+   NamePlateHorizontalScale = 1.0, -- Needed to resolve a bug
+   NamePlateVerticalScale = 1.0, -- Needed to resolve a bug
+   nameplateLargerScale = 1.2,
+   nameplateLargeTopInset = .1,
+   nameplateMaxScale = 1.0,
+   nameplateMinScale = 0.6,
+   nameplateShowSelf = 1,
    nameplateShowEnemies = 1,
-   nameplateShowEnemyPets = 1,
+   nameplateShowEnemyMinions = 0,
+   nameplateShowEnemyPets = 1, -- (default 0)
    nameplateShowEnemyGuardians = 0,
    nameplateShowEnemyTotems = 0,
    nameplateShowEnemyMinus = 1,
+   nameplateShowFriends = 0,
+   nameplateShowFriendlyMinions = 0,
+   nameplateShowFriendlyPets = 0,
+   nameplateShowFriendlyGuardians = 0,
+   nameplateShowFriendlyTotems = 0,
    ShowClassColorInNameplate = 1,
-   showVKeyCastbar = 1, -- technically Nameplates
-   showVKeyCastbarOnlyOnTarget = 1, -- technically Nameplates
-   showVKeyCastbarSpellName = 1, -- technically Nameplates
+   ShowNamePlateLoseAggroFlash = 1,
 
    -- [[ FCT Options Panel ]] --
-   enableCombatText = 1,
-   fctCombatState = 1,
-   fctDodgeParryMiss = 1,
-   fctDamageReduction = 0,
-   fctRepChanges = 1,
-   fctReactives = 1,
-   fctFriendlyHealers = 0,
-   fctComboPoints = 1,
-   fctLowManaHealth = 1,
-   fctEnergyGains = 0,
-   fctPeriodicEnergyGains = 0,
-   fctHonorGains = 0,
-   fctAuras = 1,
+   enableFloatingCombatText =1,
    CombatDamage = 1,
-   CombatLogPeriodicSpells = 1,
-   PetMeleeDamage = 1,
    CombatHealing = 1,
-   CombatHealingAbsorbTarget = 1,
    CombatHealingAbsorbSelf = 1,
+   CombatHealingAbsorbTarget = 1,
+   CombatLogPeriodicSpells = 1,
+   enablePetBattleCombatText = 1,
+   fctAuras = 1,
+   fctCombatState = 1,
+   fctComboPoints = 1,
+   fctDodgeParryMiss = 1,
+   fctEnergyGains = 0,
+   fctLowManaHealth = 1,
+   fctPeriodicEnergyGains = 0,
+   fctReactives = 1,
+   fctRepChanges = 1,
    fctSpellMechanics = 1,
    fctSpellMechanicsOther = 0,
-   enablePetBattleCombatText = 1,
+   PetMeleeDamage = 1,
 
    -- [[ Status Text Options Panel ]] --
-   xpBarText = 1,
-   playerStatusText = 1,
-   petStatusText = 1,
    partyStatusText = 1,
+   petStatusText = 1,
+   petStatusText = 1,
+   playerStatusText = 1,
    targetStatusText = 1,
-   alternateResourceText = 1,
+
 
    -- [[ UnitFrame Options Panel ]] --
    showPartyBackground = 1,
@@ -162,11 +169,11 @@ local cvars = {
    cameraDistanceMaxFactor = 1.5, -- minValue = 1, maxValue = 2, valueStep = 0.1
 
    -- [[ Buffs and Debuffs Options Panel ]] --
-   buffDurations = 1,
-   showDispelDebuffs = 1,
-   showCastableBuffs = 1,
-   consolidateBuffs = 0,
-   showAllEnemyDebuffs = 0,
+  --  buffDurations = 1,
+  --  showDispelDebuffs = 1,
+  --  showCastableBuffs = 1,
+  --  --consolidateBuffs = 0,
+  --  showAllEnemyDebuffs = 0,
 
    -- [[ Battle.net Options Panel ]] --
    showToastOnline = 1,
@@ -187,7 +194,7 @@ local cvars = {
 
    -- [[ Help Options Panel ]] --
    showTutorials = 0, -- Beginners tips
-   showGameTips = 0, -- Tip of the Day
+   --showGameTips = 0, -- Tip of the Day
    UberTooltips = 1, -- More info in ToolTips
    scriptErrors = 1, -- Show UI errors
    colorblindMode = 0,
@@ -227,16 +234,17 @@ local cvars = {
 
    -- Misc
    auctionDisplayOnCharacter = 1,
-   characterFrameCollapsed = 0,
    checkAddonVersion = 0,
    screenshotFormat = 'png',
    screenshotQuality = 10,
    scriptErrors = 1,
    scriptProfile = 0,
    synchronizeBindings = 0, -- because blizzard seems to fuck me over
+   synchronizeChatFrames = 1,
    synchronizeConfig = 0, -- because blizzard seems to fuck me over
    synchronizeMacros = 0, -- because blizzard seems to fuck me over
    synchronizeSettings = 0, -- because blizzard seems to fuck me over
+   AllowDangerousScripts =1,
    taintLog = 1,
 
    -- Normal settings

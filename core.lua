@@ -12,6 +12,8 @@ local handler = CreateFrame("Frame")
 function Augmento.PLAYER_ENTERING_WORLD(...)
   Augmento.Init()
   print('|cffff6000Augmento:|r Successfully initialized settings')
+  Augmento.ApplySystemFonts()
+  -- Augmento.SetDmgFont()
 end
 
 ------------------------------------------------------------------------
